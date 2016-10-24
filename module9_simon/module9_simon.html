@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module9</title>
+  
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <script src="jquery-accessibleMegaMenu.js"></script> 
+    <script src="bootstrap-rating.min.js"></script>
+  <style>
+      h2 {background-color: deepskyblue}
+      p {background-color: darkorange}
+ 
+    .nav-menu {
+      position: relative;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      z-index: 15;
+    }
+
+    
+    .nav-item {
+      display: inline-block;
+    }
+
+   
+    .nav-item > a {
+      position: relative;
+      display: inline-block;
+      padding: 1em;
+      border: 1px solid transparent;
+    }
+
+    
+    .nav-item > a:focus,
+    .nav-item > a.open {
+      border: 1px solid #dad;
+    }
+
+   
+    .nav-item > a.open {
+      background: #aff;
+      z-index: 1;
+    }
+
+   
+    .sub-nav {
+      position: absolute;
+      display: none;
+      top: 3.5em;
+      padding: 1em;
+      border: 1px solid #add;
+      background: #ffa;
+    }
+
+   
+    .sub-nav.open {
+      display: block;
+    }
+
+   
+    .sub-nav ul {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 1em 0 0;
+      padding: 0;
+    }
+
+    
+    .sub-nav li {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <h2>Click below to show or hide me</h2> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+          <div class="clearfix visible-xs-block"></div>
+        <button class="item1">Click to hide</button>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+          <div class="clearfix visible-sm-block"></div>
+        <button class="item2">Click to show</button>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    
+    $(".item1").click(
+      function() {
+       
+        $(".target1").hide();
+        
+      }
+    );
+    
+    $(".item2").click(
+      function() {
+        
+        $(".target1").show();
+        
+      }
+    );
+  </script>
+    <form>
+    <div class="jumbotron">
+      <h1>
+        Rate your progress: 
+        <input type="hidden" id="rating1" class="rating" value="2">
+      </h1>
+
+      <p>
+        Rate your happiness:
+        <input type="hidden" id="rating2" class="rating" 
+         data-filled="glyphicon glyphicon-heart" 
+         data-empty="glyphicon glyphicon-heart-empty">
+      </p>
+    </div>
+  </form>
+  
+  <nav class="mega">
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="?movie">Movies</a>
+        <div class="sub-nav">
+          <ul class="sub-nav-group">
+            <li><a href="?movie&genre=0">Action & Adventure</a></li>
+            <li><a href="?movie&genre=2">Children & Family</a></li>
+            <li>…</li>
+          </ul>
+          <ul class="sub-nav-group">
+            <li><a href="?movie&genre=7">Dramas</a></li>
+            <li><a href="?movie&genre=9">Foreign</a></li>
+            <li>…</li>
+          </ul>
+          <ul class="sub-nav-group">
+            <li><a href="?movie&genre=14">Musicals</a></li>
+            <li><a href="?movie&genre=15">Romance</a></li>
+            <li>…</li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="?tv">TV Shows</a>
+        <div class="sub-nav">
+          <ul class="sub-nav-group">
+            <li><a href="?tv&genre=20">Classic TV</a></li>
+            <li><a href="?tv&genre=21">Crime TV</a></li>
+            <li>…</li>
+          </ul>
+          <ul class="sub-nav-group">
+            <li><a href="?tv&genre=27">Reality TV</a></li>
+            <li><a href="?tv&genre=30">TV Action</a></li>
+            <li>…</li>
+          </ul>
+          <ul class="sub-nav-group">
+            <li><a href="?tv&genre=33">TV Dramas</a></li>
+            <li><a href="?tv&genre=34">TV Horror</a></li>
+            <li>…</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div class="jumbotron">
+    <h1>Mega Menu Example</h1>
+  </div>
+
+
+<script>
+  $("nav.mega").accessibleMegaMenu({
+   
+    uuidPrefix: "accessible-megamenu",
+
+    
+    menuClass: "nav-menu",
+
+   
+    topNavItemClass: "nav-item",
+
+    
+    panelClass: "sub-nav",
+
+    
+    panelGroupClass: "sub-nav-group",
+
+    
+    hoverClass: "hover",
+
+    
+    focusClass: "focus",
+
+    
+    openClass: "open"
+  });
+</script>
+    
+    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6"><img src="1.jpg" alt="1"></div>
+    <div class="clearfix visible-xs-block"></div>
+    <div class="clearfix visible-md-block"></div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6"><img src="2.jpg" alt="2"></div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6"><img src="3.jpg" alt="3"></div>
+    <div class="clearfix visible-sm-block"></div>
+    <div class="clearfix visible-lg-block"></div>
+    <div class="clearfix visible-xs-block"></div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6"><img src="4.jpg" alt="4"></div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6"><img src="5.jpg" alt="5"></div>
+    <div class="clearfix visible-md-block"></div>
+    <div class="clearfix visible-xs-block"></div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6"><img src="6.jpg" alt="6"></div>
+    <div class="clearfix visible-sm-block"></div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6"><img src="7.jpg" alt="7"></div>
+    <div class="clearfix visible-xs-block"></div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6"><img src="8.jpg" alt="8"></div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6"><img src="9.jpg" alt="9"></div>
+    <div class="clearfix visible-sm-block"></div>
+    <div class="clearfix visible-xs-block"></div>
+    <div class="clearfix visible-md-block"></div>
+    <div class="clearfix visible-lg-block"></div>
+</body>
+</html>
