@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>module10_simon</title>
+  
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+    
+        #top {background-color: beige}
+        #main {background-color: antiquewhite}
+        #steps {background-color: bisque}
+        #n1 {background-color: aliceblue}
+        #n2 {background-color: azure}
+        #n3 {background-color: aquamarine}
+        #n4 {background-color: aqua}
+    
+    </style>
+</head>
+<body>
+    
+  <div class="container">
+    <div class="row">
+        <div id="top" class="col-xs-12 col-sm-12 col-md-12">
+            <h2>Draw It
+Spur deeper and different kinds of conversations by picking up pen and paper and drawing.</h2>
+        </div>
+      <div id="main" class="col-xs-12 col-md-12 col-sm-12">
+        <p>We’re strong believers in getting visual at IDEO.org, and drawing is a great way to learn from the people you’re designing for. Whether it’s you with the pen or them, a quick sketch, a graph, or a timeline is a fantastic way to bridge language barriers and keep a record of your research. Drawing can also help the person you’re designing for organize her thoughts visually and generally spur ideas and conversation in a different way than talking. For example, you may ask someone to draw everything they spend money on in a week, or map out all the jobs they’ve had, or show you the route they take to their job. And remember, you don’t need to be a great artist for drawing to be a highly useful tool.</p>
+      </div>
+    </div>
+    <div class="row">
+        <div id="steps" class="col-xs-12 col-md-12 col-sm-12"><h2>STEPS</h2></div>
+      <div id="n1" class="col-xs-12 col-sm-6 col-md-6">1:Make sure you have pen and paper handy when talking with the people you’re designing for. Even a sheet torn out of your notebook works great. </div>
+      <div id="n2" class="col-xs-12 col-sm-6 col-md-6">2:When you want the person you’re designing for to draw something, give them a clear idea of what you’re after. A map of their daily route? A timeline of their annual income? What percentage of their fields are dedicated to a certain crop? </div>
+        <div class="clearfix visible-md-block"></div>
+        <div class="clearfix visible-sm-block"></div>
+      <div id="n3" class="col-xs-12 col-md-6 col-sm-6">3:The person you’re designing for may feel intimidated or that she’s not a good artist. Help her over that fear. Or be the one to draw first so that she doesn’t feel embarrassed. </div>
+        <div id="n4" class="col-xs-12 col-md-6 col-sm-6">4:You can use the drawings as Conversation Starters. This Method can get you to a deeper understanding of the person you’re designing for so investigate what they’ve drawn.
+</div>
+        <div class="clearfix visible-md-block"></div>
+        <div class="clearfix visible-sm-block"></div>
+    </div>
+  </div>
+  
+  <script>
+   
+    $("div").click(
+      function() {
+       
+        var w = $(this).width();
+       
+        var h = $(this).height();
+      
+        $(this).html( w + "px wide " + h + "px high" );
+      
+        return false;
+      }
+    );
+  </script>
+</body>
+</html>
